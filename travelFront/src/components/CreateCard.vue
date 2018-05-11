@@ -12,11 +12,19 @@
             <p style="text-align:center; font-size:18px;" >{{infos.adress}}</p>
             <!--ville/pays-->
             <!-- nom du lieux-->
-            <div class="row">
+            <div class="row margin-bottom-0">
                <input class="col m6" v-model="infos.title" style="text-align:center">
                <!--<p v-if="infos.adress" > Latitude : {{infos.adress.geometry.location.lat()}} - Longitude : {{infos.adress.geometry.location.lng()}} </p> -->
                <p style="color:#7DB7FF"> {{new Date().getFullYear()}} </p>
             </div>
+            <p>
+              <select id="s_category">
+                <option value="" disabled selected>Choisissez catégorie</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="hotel">Hôtel</option>
+                <option value="monument">Monument</option>
+              </select>
+            </p>
             <!--date-->
          </div>
       </div>
@@ -85,7 +93,7 @@ export default {
         url: "https://httpbin.org/post",
         thumbnailWidth: 150,
         maxFiles: 1,
-        maxFilesize: 0.05,
+        maxFilesize: 5,
         addRemoveLinks: true,
         headers: { "My-Awesome-Header": "header value" },
         accept: function accept(file, done) {

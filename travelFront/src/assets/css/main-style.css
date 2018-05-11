@@ -153,6 +153,7 @@ section h2 {
 
 .tb-card .card-img {
     height: 325px;
+    padding: 0!important;
     background-color: #e5e5e5;
     background-position: center;
     background-size: cover;
